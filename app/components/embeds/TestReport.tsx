@@ -87,7 +87,7 @@ export function TestReport({ report }: TestReportProps) {
         {allPassed && (
           <div className="mt-6 p-4 bg-success-green/10 border border-success-green rounded-sharp">
             <p className="text-success-green font-semibold text-center">
-              🎉 All tests passed! MVP is ready for deployment.
+              🎉 All tests passed! Visit http://localhost:4000 to test your MVP yourself.
             </p>
           </div>
         )}

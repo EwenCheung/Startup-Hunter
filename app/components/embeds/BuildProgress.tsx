@@ -27,11 +27,26 @@ export function BuildProgress({ logs, progress = 0 }: BuildProgressProps) {
     }
   }, [currentIndex, logs]);
 
+  // Calculate estimated time remaining (assuming 120 seconds total build time)
+  const estimatedTimeRemaining = progress < 100 
+    ? Math.ceil((120 * (100 - progress)) / 100) 
+    : 0;
+
   return (
     <Card className="p-6 border-2 border-brand-blue rounded-sharp bg-gray-900">
       <div className="mb-4">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-xl font-bold text-white">Building MVP</h3>
+          <div>
+            <h3 className="text-xl font-bold text-white inline">Building MVP</h3>
+            {progress < 100 && estimatedTimeRemaining > 0 && (
+              <span className="text-gray-400 text-sm ml-2">
+                (~{estimatedTimeRemaining}s remaining)
+              </span>
+            )}
+            {progress === 100 && (
+              <span className="text-success-green text-sm ml-2">(Complete)</span>
+            )}
+          </div>
           <span className="text-success-green font-mono text-sm">
             {progress}%
           </span>

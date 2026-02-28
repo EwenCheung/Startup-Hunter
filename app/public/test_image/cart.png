@@ -1,0 +1,68 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#f9fafb"/>
+  
+  <!-- Browser Chrome -->
+  <rect width="1200" height="60" fill="#e5e7eb"/>
+  <circle cx="20" cy="30" r="8" fill="#ef4444"/>
+  <circle cx="45" cy="30" r="8" fill="#eab308"/>
+  <circle cx="70" cy="30" r="8" fill="#22c55e"/>
+  <text x="100" y="38" font-family="monospace" font-size="14" fill="#374151">localhost:4000/cart</text>
+  
+  <!-- Header -->
+  <rect y="60" width="1200" height="80" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="100" y="110" font-family="Arial" font-size="32" font-weight="bold" fill="#111827">🛒 Shopping Cart</text>
+  
+  <!-- Cart Items -->
+  <text x="100" y="180" font-family="Arial" font-size="20" font-weight="600" fill="#374151">Your Items (1)</text>
+  
+  <!-- Cart Item Card -->
+  <g transform="translate(100, 200)">
+    <rect width="700" height="150" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+    
+    <!-- Product Image -->
+    <rect x="20" y="25" width="100" height="100" rx="4" fill="#dbeafe"/>
+    <text x="70" y="85" font-size="48" text-anchor="middle">🦴</text>
+    
+    <!-- Product Details -->
+    <text x="140" y="55" font-family="Arial" font-size="18" font-weight="600" fill="#111827">Premium Dog Food</text>
+    <text x="140" y="85" font-family="Arial" font-size="14" fill="#6b7280">Organic ingredients</text>
+    <text x="140" y="110" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb">$49.99</text>
+    
+    <!-- Quantity -->
+    <rect x="500" y="50" width="120" height="40" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+    <text x="560" y="77" font-family="Arial" font-size="16" fill="#111827" text-anchor="middle">Qty: 1</text>
+    
+    <!-- Remove Button -->
+    <text x="650" y="77" font-family="Arial" font-size="14" fill="#ef4444" text-anchor="middle">Remove</text>
+  </g>
+  
+  <!-- Order Summary -->
+  <g transform="translate(850, 200)">
+    <rect width="300" height="250" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+    <text x="150" y="35" font-family="Arial" font-size="20" font-weight="bold" fill="#111827" text-anchor="middle">Order Summary</text>
+    
+    <line x1="20" y1="50" x2="280" y2="50" stroke="#e5e7eb" stroke-width="1"/>
+    
+    <text x="20" y="80" font-family="Arial" font-size="14" fill="#6b7280">Subtotal:</text>
+    <text x="280" y="80" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">$49.99</text>
+    
+    <text x="20" y="110" font-family="Arial" font-size="14" fill="#6b7280">Shipping:</text>
+    <text x="280" y="110" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">$5.00</text>
+    
+    <text x="20" y="140" font-family="Arial" font-size="14" fill="#6b7280">Tax:</text>
+    <text x="280" y="140" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">$4.40</text>
+    
+    <line x1="20" y1="155" x2="280" y2="155" stroke="#e5e7eb" stroke-width="2"/>
+    
+    <text x="20" y="185" font-family="Arial" font-size="18" font-weight="bold" fill="#111827">Total:</text>
+    <text x="280" y="185" font-family="Arial" font-size="18" font-weight="bold" fill="#2563eb" text-anchor="end">$59.39</text>
+    
+    <!-- Checkout Button -->
+    <rect x="20" y="205" width="260" height="50" rx="8" fill="#2563eb"/>
+    <text x="150" y="237" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Proceed to Checkout</text>
+  </g>
+  
+  <!-- Test Pass Badge -->
+  <rect x="1050" y="700" width="120" height="40" rx="20" fill="#22c55e"/>
+  <text x="1110" y="725" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">✓ TEST PASS</text>
+</svg>

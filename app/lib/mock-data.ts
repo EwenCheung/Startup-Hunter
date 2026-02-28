@@ -57,97 +57,97 @@ export interface TestReport {
 export const MOCK_TRENDS: Trend[] = [
   {
     id: 1,
-    title: "AI Meeting Notes for Nurses",
-    score: 8.7,
+    title: "Premium Pet E-commerce Boom",
+    score: 8.5,
     momentum: 9,
     pain: 9,
-    competition: 3,
-    build: 5,
+    competition: 5,
+    build: 4,
     painPoints: [
-      "We waste 2 hours/day on notes",
-      "Existing tools don't understand medical terms",
-      "Manual SOAP formatting is tedious"
+      "Amazon/Chewy have cluttered UI, too many options",
+      "Local pet stores overpriced, limited selection",
+      "Hard to find trusted, quality pet products online"
     ],
     evidence: [
-      "Product Hunt: 342 upvotes (↑ 312%)",
-      "Reddit r/nursing: 47 comments, 89% positive",
-      "GitHub trending: Similar repos gained 2.3K stars this month"
+      "Product Hunt: 'PetBox' got 1,247 upvotes",
+      "Reddit r/Entrepreneur: 147 posts about pet e-commerce success",
+      "GitHub: react-pet-store trending (2.3k stars this month)"
     ]
   },
   {
     id: 2,
-    title: "AI Expense Tracking for Freelancers",
-    score: 7.4,
-    momentum: 7,
+    title: "AI-Powered Pet Health Monitoring",
+    score: 7.2,
+    momentum: 9,
     pain: 8,
-    competition: 6,
-    build: 4,
+    competition: 7,
+    build: 9,
     painPoints: [
-      "Manual categorization takes hours each month",
-      "Miss tax deductions due to poor tracking",
-      "Receipt management is a nightmare"
+      "Vet visits expensive for routine check-ups",
+      "Hard to track pet health metrics daily",
+      "Miss early warning signs of health issues"
     ],
     evidence: [
-      "Product Hunt: 218 upvotes",
-      "Hacker News: 34 comments, front page for 8 hours",
-      "Reddit r/freelance: 'I'd pay $50/month for this'"
+      "Product Hunt: 'PetWatch AI' - 892 upvotes",
+      "Hacker News: 'Our dog's heart issue caught by FitBark'",
+      "GitHub: pet-health-tracker (1.8k stars)"
     ]
   },
   {
     id: 3,
-    title: "AI Code Review for Solo Developers",
-    score: 6.8,
-    momentum: 8,
-    pain: 7,
-    competition: 7,
+    title: "Pet-Friendly Workspace Tools",
+    score: 6.1,
+    momentum: 7,
+    pain: 6,
+    competition: 5,
     build: 6,
     painPoints: [
-      "No senior dev to review code",
-      "Security vulnerabilities slip through",
-      "Hard to maintain consistency alone"
+      "Pet daycare management done via Excel",
+      "No automated check-in/check-out system",
+      "Hard to track 50+ dogs daily"
     ],
     evidence: [
-      "GitHub trending: 5 similar projects launched this quarter",
-      "Dev.to: 156 upvotes on 'I need AI code review'",
-      "Product Hunt: 3 competing tools, all 500+ upvotes"
+      "Reddit r/startups: 'Built pet daycare SaaS, $10k MRR'",
+      "Product Hunt: 'PetDesk' - 634 upvotes",
+      "Return-to-office increasing demand"
     ]
   },
   {
     id: 4,
-    title: "Voice-to-CRM for Sales Teams",
-    score: 6.2,
-    momentum: 6,
-    pain: 8,
-    competition: 5,
+    title: "Sustainable Pet Products",
+    score: 6.3,
+    momentum: 7,
+    pain: 6,
+    competition: 6,
     build: 7,
     painPoints: [
-      "Salespeople hate manual CRM data entry",
-      "Call notes get lost or forgotten",
-      "Poor data quality hurts forecasting"
+      "Feel guilty about plastic pet toys",
+      "Hard to find truly eco-friendly products",
+      "Pet industry has huge carbon footprint"
     ],
     evidence: [
-      "Product Hunt: 189 upvotes",
-      "LinkedIn Sales groups: 'This would save 5 hours/week'",
-      "G2 reviews: Existing CRMs have 2.3★ on 'ease of data entry'"
+      "Product Hunt: 'EcoPaws' - 723 upvotes",
+      "Hacker News: Discussion about pet sustainability",
+      "Gen Z/Millennial owners prioritize green products"
     ]
   },
   {
     id: 5,
-    title: "AI Contract Review for Startups",
-    score: 5.9,
-    momentum: 5,
-    pain: 7,
+    title: "Pet Social Networks",
+    score: 5.3,
+    momentum: 7,
+    pain: 5,
     competition: 8,
-    build: 8,
+    build: 5,
     painPoints: [
-      "Legal review costs $500-2000 per contract",
-      "Turnaround time is 3-5 days",
-      "Can't afford full-time legal counsel"
+      "My dog needs friends but I'm introverted",
+      "Nextdoor full of lost pet posts",
+      "No good app for dog playdates"
     ],
     evidence: [
-      "Product Hunt: 167 upvotes",
-      "Reddit r/startups: 'We need this yesterday'",
-      "YC companies: 12% mention contract review pain in batches"
+      "Product Hunt: 'PawParty' - 445 upvotes",
+      "Reddit: 'Built PetTinder for playdates'",
+      "Pets becoming larger part of owner identity"
     ]
   }
 ];
@@ -157,72 +157,72 @@ export const MOCK_TRENDS: Trend[] = [
 export const MOCK_IDEAS: Idea[] = [
   {
     id: 1,
-    title: "NurseNote AI — Voice-to-Chart for Healthcare",
-    concept: "Voice-activated notes that auto-transcribe to SOAP format, integrate with EMR systems, and suggest ICD-10 codes.",
-    targetUser: "Registered nurses (12-hour shifts), spending 2+ hours/day on documentation",
+    title: "Pawsome Pet Boutique — Premium Pet E-commerce",
+    concept: "Mobile-first online store for curated, high-quality pet accessories. Beautiful product photography, seamless UX, fast checkout.",
+    targetUser: "Urban millennials/Gen Z (26-35 years old), $60k+ income, treat pets like family",
     advantages: [
-      "Medical terminology model (trained on 500K+ clinical notes)",
-      "HIPAA-compliant infrastructure from day 1",
-      "EMR partnerships (Epic, Cerner integration roadmap)",
-      "Offline mode for low-connectivity hospital areas"
+      "Mobile-first design (competitors are desktop-era)",
+      "Curated selection (500 SKUs vs Chewy's 50,000)",
+      "Trust through testing (all products tested by our pets)",
+      "Community-driven (customer photos, viral sharing)"
     ],
-    acontextReasoning: "Prioritizing B2B because you rejected B2C ideas last time for high CAC. Healthcare has strong unit economics ($100-200 per user/month is normal). Hospitals have budget.",
+    acontextReasoning: "You selected Premium Pet E-commerce (highest score: 8.5). This idea has low build complexity (standard e-commerce stack), clear monetization (40-60% margins), and strong demand (pet ownership up 67% post-pandemic). First revenue possible in Week 1.",
     recommended: true
   },
   {
     id: 2,
-    title: "ExpenseIQ — AI-Powered Expense Categorization",
-    concept: "Snap receipts, auto-categorize for taxes, integrates with accounting software (QuickBooks, Xero).",
-    targetUser: "Freelancers and solopreneurs earning $50K-200K/year, filing quarterly taxes",
+    title: "PetBox — Monthly Subscription for Pet Goodies",
+    concept: "Recurring subscription ($29/month) with themed boxes. Partner with pet brands for co-marketing.",
+    targetUser: "Busy professionals who want to spoil their pets without shopping",
     advantages: [
-      "Receipt OCR with 98% accuracy",
-      "Tax optimization suggestions (saves users $2-5K/year)",
-      "Accountant collaboration features",
-      "Multi-currency support for global freelancers"
+      "Predictable MRR (pets don't churn)",
+      "High lifetime value",
+      "Brand partnerships reduce COGS",
+      "Gift-friendly (easy to buy for friends' pets)"
     ],
-    acontextReasoning: "This is B2B (freelancers run businesses) but has some B2C vibes. CAC is manageable at $30-50 via content marketing. LTV is strong ($600-1200/year).",
+    acontextReasoning: "Strong business model but BarkBox already dominates this space. Would need niche positioning (e.g., 'for senior dogs only') to compete. Inventory complexity is medium-high.",
     recommended: false
   },
   {
     id: 3,
-    title: "CodeSensei — AI Senior Developer for Solo Founders",
-    concept: "AI code review, architecture suggestions, security audits for solo developers building MVPs.",
-    targetUser: "Solo founders, indie hackers, junior devs working alone",
+    title: "Custom Pet Collar Marketplace — Etsy for Pet Gear",
+    concept: "Two-sided marketplace connecting artisan makers with pet owners. Platform takes 15% commission.",
+    targetUser: "Pet owners wanting unique/personalized items, artisan makers",
     advantages: [
-      "Learns your codebase patterns (contextual review)",
-      "Security scan integrated (OWASP Top 10 checks)",
-      "Refactoring suggestions with diffs",
-      "Supports 12 languages (JS, TS, Python, Go, Rust, etc.)"
+      "No inventory risk (marketplace model)",
+      "Network effects create moat",
+      "Pet-specific features (size guides, material safety)",
+      "Scalable without holding stock"
     ],
-    acontextReasoning: "Strong B2B SaaS potential. Developers will pay $20-50/month. But competition is fierce (GitHub Copilot, Cursor, others). Need a differentiation wedge.",
+    acontextReasoning: "Marketplace model is capital-efficient but faces chicken-and-egg problem. Need both makers AND buyers to launch. First revenue likely Month 2-3 after reaching liquidity.",
     recommended: false
   },
   {
     id: 4,
-    title: "SalesWhisper — Voice-to-CRM Automation",
-    concept: "Salespeople speak after calls, AI writes CRM notes, suggests follow-up actions, updates deal stages.",
-    targetUser: "B2B sales reps at 10-500 person companies using Salesforce/HubSpot",
+    title: "PetGram — Social Network for Pets",
+    concept: "Instagram-style photo sharing but pet-only. Features: pet profiles, playdate matching, local pet events.",
+    targetUser: "Pet influencers, social pet owners who love sharing pet photos",
     advantages: [
-      "Salesforce & HubSpot native integrations",
-      "Call recording + transcription (Zoom, Meet, Teams)",
-      "Automatic next-step suggestions",
-      "Manager dashboard (deal quality scoring)"
+      "Pet-only community (higher engagement)",
+      "Playdate matching feature",
+      "Local events discovery",
+      "Pet-specific filters and frames"
     ],
-    acontextReasoning: "Strong B2B play. Sales teams have budget. But build complexity is high (integrations are hard). Might take 6-12 months to ship.",
+    acontextReasoning: "Viral potential but hard monetization. Instagram already serves this need. Would need strong differentiation beyond 'pets only' to justify separate app.",
     recommended: false
   },
   {
     id: 5,
-    title: "ContractSafe AI — Startup Legal Review",
-    concept: "Upload contracts (NDAs, vendor agreements, leases), get AI review with risk flags and redline suggestions.",
-    targetUser: "Early-stage startups (pre-Series A) without in-house legal",
+    title: "VetConnect — Telehealth for Pets",
+    concept: "Video consultations with licensed vets. $39 per session, partner with vet clinics for network.",
+    targetUser: "Pet owners with non-emergency health questions, saving vet visit time/cost",
     advantages: [
-      "Trained on 100K+ startup contracts",
-      "Identifies 'gotcha' clauses (IP assignment, unlimited liability)",
-      "Lawyer marketplace for complex issues",
-      "Template library (500+ startup-friendly contracts)"
+      "Clear value prop (save $80-150 vs in-person)",
+      "Proven model (human telehealth works)",
+      "Vet network monetization",
+      "Prescription management integration"
     ],
-    acontextReasoning: "Clear B2B SaaS. Startups will pay $100-300/month. But legal is a regulated space—liability risk is high. May need to partner with law firms.",
+    acontextReasoning: "Strong business model but regulatory complexity is high (state-by-state vet licenses). Need vet network to launch. Build complexity is medium-high.",
     recommended: false
   }
 ];
@@ -232,50 +232,50 @@ export const MOCK_IDEAS: Idea[] = [
 export const MOCK_PROPOSAL: ProposalSection[] = [
   {
     title: "1. Problem Statement",
-    content: "Nurses spend 2+ hours per 12-hour shift (16% of their time) on documentation, reducing direct patient care. Current EMR systems require manual typing, don't understand medical terminology, and force tedious SOAP format entry. This documentation burden contributes to nurse burnout (53% report feeling overwhelmed by paperwork) and medical errors (poor documentation is cited in 40% of malpractice cases)."
+    content: "Pet owners want to buy high-quality accessories (collars, beds, toys) but current options are frustrating:\n\n**Amazon/Chewy**: Cluttered UI, overwhelming selection (50k+ SKUs), low trust due to fake reviews and inconsistent quality.\n\n**Local pet stores**: Limited selection, overpriced (30-50% markup), inconvenient hours.\n\n**Etsy**: Too artsy/niche, long shipping times (2-3 weeks), no standardized returns.\n\n**Who feels this pain**: Urban millennials/Gen Z (26-35 years old) who treat pets like family members, value aesthetics and brand trust, prefer mobile shopping, and are willing to pay 20-30% premium for quality.\n\n**Urgency**: Pet ownership surged 67% post-pandemic. These new owners have no brand loyalty and are actively searching for their 'go-to' pet shop."
   },
   {
     title: "2. Target User Persona",
-    content: "Sarah Chen, 32, RN at Urban General Hospital. Works three 12-hour shifts per week in med-surg. Spends 2.5 hours per shift on charting. Frustrated with Epic's clunky interface. Dreams of spending more time with patients. Tech-savvy (uses iPhone, Spotify, owns AirPods). Would pay out-of-pocket for tools that save time."
+    content: "**Primary: 'Mobile Maya' (70% of revenue)**\n\n• Age: 28, works in tech/marketing\n• Income: $75k/year\n• Pets: 1 dog (Golden Retriever named Mochi)\n• Behavior: Shops on phone during commute, follows pet influencers on Instagram, spends $150/month on pet products\n• Values: Fast shipping, easy returns, aesthetics\n• Job-to-be-done: 'I want to spoil my dog without spending hours researching products'\n\n**Secondary: 'Gifter Gary' (30% of revenue)**\n\n• Age: 32, buying gifts for friends' pets\n• Behavior: Impulse buyer, values presentation (gift-ready packaging)\n• Job-to-be-done: 'I need a thoughtful pet gift that arrives fast and looks premium'"
   },
   {
     title: "3. Current Alternatives & Their Weaknesses",
-    content: "**Manual EMR Entry** (Epic, Cerner): Clunky, time-consuming, requires typing. **Dragon Medical** ($1,500/year): Expensive, requires training, poor at medical context. **Nuance PowerScribe** ($3,000/year): Radiology-focused, not for floor nurses. **Consumer voice apps** (Siri, Google): Not HIPAA-compliant, no medical vocabulary. **Our edge**: HIPAA-native, nurse-specific workflow, EMR integration, affordable ($50/month)."
+    content: "**Chewy.com** (Market Leader)\n✅ Strengths: Fast shipping, good customer service\n❌ Weaknesses: Desktop-era UI, overwhelming catalog (50k+ SKUs), no curation\n→ Our Wedge: Mobile-first design + curated selection (500 SKUs max)\n\n**Amazon Pet Supplies**\n✅ Strengths: Price, Prime shipping\n❌ Weaknesses: Low trust (fake reviews), commoditized, no brand loyalty\n→ Our Wedge: Trust through curation + brand storytelling\n\n**Local Pet Stores**\n✅ Strengths: Immediate pickup, personal advice\n❌ Weaknesses: Limited hours, overpriced, small selection\n→ Our Wedge: 24/7 availability + competitive pricing + wider selection"
   },
   {
     title: "4. Unique Wedge (Why You Can Win)",
-    content: "1. **Vertical focus**: Built exclusively for floor nurses (not doctors, not admins). 2. **SOAP-native**: Understands clinical documentation structure. 3. **Offline-first**: Works in hospital dead zones. 4. **EMR plugins**: Epic & Cerner integrations (not just 'export to PDF'). 5. **Clinical validation**: Partnered with 3 RN advisors from day 0. 6. **Pricing**: $50/month (vs. Dragon's $125/month), hospitals will reimburse."
+    content: "**Core Differentiation**: First mobile-first, curated pet boutique for premium accessories.\n\n**3 Moats**:\n\n1. **Curation as a Service**\n   • Test every product with our team's pets\n   • Max 500 SKUs (vs Chewy's 50,000)\n   • 'Pawsome Approved' trust badge\n\n2. **Mobile-First UX**\n   • Built for one-thumb browsing\n   • Product pages load in <1 second\n   • 3-tap checkout (Apple Pay / Google Pay)\n   • Swipe-based product discovery\n\n3. **Community-Driven Content**\n   • Customer photos featured prominently\n   • Pet profiles for personalized recommendations\n   • Shareable: 'Share your pet's new collar' → viral loop"
   },
   {
     title: "5. MVP Scope (Must-Have Features Only)",
-    content: "**Core Features**: Voice recording (60sec max), SOAP transcription (auto-format), basic medical terminology (1,000 terms), copy to clipboard (paste into EMR). **Not in MVP**: EMR integrations (Phase 2), ICD-10 suggestions (Phase 2), team sharing (Phase 3), offline mode (Phase 3). **Success metric**: 10 nurses use it daily for 2 weeks, save 30+ min per shift."
+    content: "**✅ Must-Have**:\n\n• Homepage (hero banner, category tiles, featured products grid)\n• Categories page (Dogs, Cats, Birds, Fish, Reptiles)\n• Product detail page (image gallery, add to cart, quantity selector)\n• Shopping cart (quantity adjustment, remove items, subtotal)\n• Mobile-first design (bottom nav, dark mode toggle)\n• Checkout redirect (Stripe test mode)\n\n**❌ Explicitly Out of Scope**:\n\n• User accounts / authentication\n• Real payment processing (use test mode)\n• Order history\n• Product reviews\n• Shipping calculations\n• Inventory management\n• Admin dashboard"
   },
   {
     title: "6. Key User Flows (3-5 Critical Paths)",
-    content: "**Flow 1**: Nurse ends patient visit → Opens NurseNote app → Speaks notes for 45sec → Reviews SOAP output → Copies to EMR → Done (2min total). **Flow 2**: Nurse makes verbal error → Taps 'Redo' → Speaks correction → Updated instantly. **Flow 3**: Nurse unsure about term → App suggests 3 alternatives → Selects correct one. **Flow 4**: End of shift → Reviews 8 patient notes → Batch copy all to EMR. **Flow 5**: Onboarding → 60sec tutorial video → Records first practice note → Gets instant feedback."
+    content: "**Flow 1: Quick Add to Cart (30 seconds)**\n1. User lands on homepage\n2. Scrolls to Featured Products\n3. Sees 'Premium Leather Collar' - $32\n4. Taps product card → Product Detail opens\n5. Taps 'Add to Cart'\n6. Toast notification: 'Added to cart! ✓'\n7. Cart icon updates: (0) → (1)\n\n**Flow 2: Browse by Category (45 seconds)**\n1. Taps 'Categories' in bottom nav\n2. Sees all product categories\n3. Filters by 'Dogs'\n4. Scrolls through 12 dog products\n5. Taps 'Orthopedic Dog Bed' - $68\n6. Adjusts quantity to 2\n7. Taps 'Add to Cart'\n\n**Flow 3: Checkout (2 minutes)**\n1. Taps Cart icon (badge shows 3 items)\n2. Reviews cart contents\n3. Adjusts quantity (−1 on one item)\n4. Taps 'Checkout'\n5. Redirects to Stripe Checkout\n6. Enters test card\n7. Sees 'Thank you' page"
   },
   {
-    title: "7. Data & Model Plan (Optional: If AI-Heavy)",
-    content: "**Model**: Fine-tuned Whisper Large v3 on 10K clinical voice samples (public datasets + synthetic). **Medical terms**: Custom vocabulary overlay (1,000 → 5,000 terms by launch). **SOAP formatting**: Rule-based post-processing (Subjective/Objective/Assessment/Plan structure). **Privacy**: On-device processing (no cloud) OR encrypted cloud with BAA. **Training data sources**: MIMIC-III notes (deidentified), synthetic data from clinical advisors, user opt-in feedback loop."
+    title: "7. Technical Stack",
+    content: "**Frontend**: React 19 + TypeScript, Vite 6 (fast builds), React Router 7 (routing), Tailwind CSS 4 (styling), Material Symbols (icons), Framer Motion (animations)\n\n**State**: React Context API for cart management (no Redux - overkill for MVP)\n\n**Data**: JSON mock data (products.json), LocalStorage for cart persistence, No database (post-MVP: Supabase)\n\n**Payments**: Stripe Checkout (test mode), No custom payment form (reduces PCI compliance scope)\n\n**Hosting (Post-MVP)**: Vercel (auto-deploy from GitHub), Custom domain: pawsome.shop\n\n**Why This Stack**: ⚡ Fast (Vite builds <2s), 🎨 Beautiful (Tailwind + Motion), 🔒 Type-safe (TypeScript), 📱 Mobile-first (React responsive)"
   },
   {
     title: "8. Go-to-Market (First 50 Users Strategy)",
-    content: "**Week 1-2**: Recruit 3 nurse advisors (offer free lifetime access). **Week 3-4**: Ship TestFlight beta to advisors + their 10 colleagues (30 total nurses). **Week 5-6**: Nursing subreddits (r/nursing, 500K members) + Facebook groups (10 groups, 50K+ members). **Week 7-8**: Nurse influencer partnerships (TikTok: @nurselifern has 400K followers). **Week 9-10**: Hospital pilot at advisor's hospital (Urban General, 200 nurses). **Week 11-12**: YC application + ProductHunt launch. **Target**: 50 DAU by end of Month 3."
+    content: "**Week 1-2: Friends & Family Alpha**\n• Share link in personal networks\n• Goal: 20 test orders, collect feedback\n• Incentive: 'Founding members get 20% off forever'\n\n**Week 3-4: Reddit/HN Launch**\n• Post to: r/SideProject, r/EntrepreneurRideAlong\n• Hacker News Show HN: 'I built a mobile-first pet boutique'\n• Goal: 500 visitors, 50 signups\n\n**Week 5-8: Pet Influencer Seeding**\n• DM 50 micro-influencers (5k-20k followers)\n• Offer: Free $50 product credit for Instagram Story mention\n• Goal: 5 influencers accept, 1,000 visitors\n\n**Week 9-12: Paid Acquisition Test**\n• Meta Ads (Instagram): $500 budget\n• Target: Women 25-35, pet owners, USA\n• Goal: <$20 CAC, >3% conversion rate"
   },
   {
     title: "9. Risks & Mitigations",
-    content: "**Technical Risk**: Whisper accuracy <90% → Mitigation: Medical term overlay + user corrections feedback loop. **Regulatory Risk**: HIPAA violation → Mitigation: Hire healthcare compliance consultant ($5K), get BAA from infrastructure providers. **Market Risk**: Nurses won't pay out-of-pocket → Mitigation: Offer hospital billing option, free tier with limits. **Competition Risk**: Epic/Cerner builds this → Mitigation: Move fast, own the nurse community, become the standard before they wake up. **Adoption Risk**: Nurses resistant to new tools → Mitigation: Dead simple onboarding (60sec), show time savings immediately."
+    content: "**Risk 1: Low Traffic / No PMF**\n• Likelihood: High (most startups fail here)\n• Impact: Critical (no revenue)\n• Mitigation: Launch with 100+ pet owner emails pre-collected, offer 30% launch discount, pivot product mix based on first 50 orders\n\n**Risk 2: High CAC, Low LTV**\n• Likelihood: Medium\n• Impact: High (unprofitable)\n• Mitigation: Focus on organic channels first (SEO, influencers), build email list for repeat purchases, introduce subscriptions for predictable LTV\n\n**Risk 3: Supplier Issues (Inventory)**\n• Likelihood: Medium\n• Impact: Medium (stockouts hurt conversion)\n• Mitigation: Multi-source top 10 SKUs, 30-day inventory buffer, dropship option for long-tail products\n\n**Risk 4: Amazon/Chewy Copies Us**\n• Likelihood: Low (we're too small)\n• Impact: High (if it happens)\n• Mitigation: Build brand moat (Pawsome = premium curation), move upmarket (exclusive artisan products)"
   },
   {
     title: "10. 2-Week Roadmap (Daily Milestones)",
-    content: "**Day 1-2**: Voice recording + playback (mobile app). **Day 3-4**: Whisper API integration (basic transcription). **Day 5-6**: SOAP formatting logic (rule-based). **Day 7**: Medical term overlays (top 100 terms). **Day 8-9**: Copy-to-clipboard + basic UI polish. **Day 10**: TestFlight build #1 → Send to 3 advisors. **Day 11**: Feedback incorporation (top 3 issues). **Day 12**: TestFlight build #2 → Send to 10 more nurses. **Day 13**: Onboarding tutorial video (record + edit). **Day 14**: ProductHunt post draft + landing page launch. **Checkpoint**: 10 nurses using daily by Day 14."
+    content: "**Day 1-2**: React app scaffolding + routing setup\n**Day 3-4**: Homepage UI (hero, categories, product grid)\n**Day 5-6**: Product detail page + cart context\n**Day 7**: Categories page + filtering\n**Day 8-9**: Shopping cart page + checkout flow\n**Day 10**: Mobile responsive polish + dark mode\n**Day 11**: Stripe test mode integration\n**Day 12**: Product images + mock data\n**Day 13**: Final testing + bug fixes\n**Day 14**: Deploy to Vercel + share with 10 friends\n\n**Checkpoint**: 10 test orders by Day 14"
   }
 ];
 
 // ===== MOCK TEST REPORT =====
 
 export const MOCK_TEST_REPORT: TestReport = {
-  passed: 4,
+  passed: 3,
   failed: 0,
   executionTime: "42 seconds",
   browser: "Chrome 120 (Isolated)",
@@ -283,45 +283,34 @@ export const MOCK_TEST_REPORT: TestReport = {
     {
       name: "Homepage Renders",
       status: "pass",
-      screenshot: "/screenshots/step1.svg",
+      screenshot: "/test_image/homepage.png",
       checks: [
-        "Verified hero text: 'NurseNote AI'",
-        "CTA button visible and clickable",
-        "Hero image loaded (nurses-working.jpg)",
-        "Navigation menu responsive"
+        "Verified header: 'Pawsome Pet Boutique'",
+        "Search bar visible and functional",
+        "Category circles loaded (Dogs, Cats, Birds, Fish, Reptiles)",
+        "Featured products grid displays 4 items"
       ]
     },
     {
-      name: "User Signup Flow",
+      name: "Product Exploration",
       status: "pass",
-      screenshot: "/screenshots/step2.svg",
+      screenshot: "/test_image/explore.png",
       checks: [
-        "Form accepts valid email format",
-        "Password requirements met (8+ chars, 1 number)",
-        "Signup button enabled after validation",
-        "Success message appears after submit"
+        "Product browse page loaded successfully",
+        "Product cards display with images and prices",
+        "Filter and search controls functional",
+        "Navigation and breadcrumbs working"
       ]
     },
     {
-      name: "Voice Recording Feature",
+      name: "Checkout Flow Completion",
       status: "pass",
-      screenshot: "/screenshots/step3.svg",
+      screenshot: "/test_image/checkout.png",
       checks: [
-        "Microphone permission prompt appears",
-        "Recording button changes to 'Stop' when active",
-        "Waveform animation displays during recording",
-        "Audio playback works after recording"
-      ]
-    },
-    {
-      name: "SOAP Note Generation",
-      status: "pass",
-      screenshot: "/screenshots/step4.svg",
-      checks: [
-        "Transcription appears within 3 seconds",
-        "SOAP format applied (S/O/A/P sections visible)",
-        "Copy button functional (clipboard API works)",
-        "Character count displayed (247 characters)"
+        "Checkout page loaded with cart items",
+        "Form fields for shipping and payment visible",
+        "Order summary displays correct totals",
+        "Submit order button enabled and functional"
       ]
     }
   ]
@@ -330,19 +319,19 @@ export const MOCK_TEST_REPORT: TestReport = {
 // ===== BUILD LOGS (for animated terminal) =====
 
 export const MOCK_BUILD_LOGS = [
-  { timestamp: "12:45:01", level: "info", message: "⚙️  Scaffolding Next.js application..." },
-  { timestamp: "12:45:03", level: "success", message: "✅ Created pages/index.tsx" },
-  { timestamp: "12:45:03", level: "success", message: "✅ Created pages/dashboard.tsx" },
-  { timestamp: "12:45:03", level: "success", message: "✅ Created pages/record.tsx" },
+  { timestamp: "12:45:01", level: "info", message: "⚙️  Scaffolding Pet Store application..." },
+  { timestamp: "12:45:03", level: "success", message: "✅ Created pages/home.tsx" },
+  { timestamp: "12:45:03", level: "success", message: "✅ Created pages/products.tsx" },
+  { timestamp: "12:45:03", level: "success", message: "✅ Created pages/cart.tsx" },
   { timestamp: "12:45:04", level: "info", message: "⚙️  Installing dependencies..." },
-  { timestamp: "12:45:12", level: "success", message: "✅ npm install complete (247 packages)" },
+  { timestamp: "12:45:12", level: "success", message: "✅ npm install complete (299 packages)" },
   { timestamp: "12:45:13", level: "info", message: "⚙️  Configuring Tailwind CSS..." },
   { timestamp: "12:45:14", level: "success", message: "✅ Tailwind configured" },
-  { timestamp: "12:45:14", level: "info", message: "⚙️  Setting up API routes..." },
-  { timestamp: "12:45:15", level: "success", message: "✅ Created /api/transcribe" },
-  { timestamp: "12:45:15", level: "success", message: "✅ Created /api/format-soap" },
+  { timestamp: "12:45:14", level: "info", message: "⚙️  Setting up product routes..." },
+  { timestamp: "12:45:15", level: "success", message: "✅ Created /products/[id]" },
+  { timestamp: "12:45:15", level: "success", message: "✅ Created /cart/checkout" },
   { timestamp: "12:45:16", level: "info", message: "🚀 Starting development server..." },
-  { timestamp: "12:45:18", level: "success", message: "✅ Server running at http://localhost:3000" },
+  { timestamp: "12:45:18", level: "success", message: "✅ Server running at http://localhost:4000" },
   { timestamp: "12:45:18", level: "success", message: "🎉 Build complete! Opening browser..." }
 ];
 
@@ -350,13 +339,13 @@ export const MOCK_BUILD_LOGS = [
 
 export const MOCK_STATUS_MESSAGES = [
   { icon: "🔍", text: "Scraping Product Hunt...", delay: 0 },
-  { icon: "✅", text: "Found 47 posts (342 upvotes)", delay: 1200 },
+  { icon: "✅", text: "Found 47 posts (1,247 upvotes)", delay: 1200 },
   { icon: "🔍", text: "Scraping GitHub trending...", delay: 1400 },
-  { icon: "✅", text: "Found 23 repos (4.2K stars)", delay: 2600 },
-  { icon: "🔍", text: "Scraping Reddit r/nursing...", delay: 2800 },
-  { icon: "✅", text: "Found 67 discussions (892 comments)", delay: 4000 },
+  { icon: "✅", text: "Found 23 repos (2.3K stars)", delay: 2600 },
+  { icon: "🔍", text: "Scraping Reddit r/Entrepreneur...", delay: 2800 },
+  { icon: "✅", text: "Found 147 discussions (892 comments)", delay: 4000 },
   { icon: "🔍", text: "Scraping Hacker News...", delay: 4200 },
   { icon: "✅", text: "Found 12 relevant threads (234 points)", delay: 5400 },
   { icon: "🧠", text: "Clustering by keywords...", delay: 5600 },
-  { icon: "✅", text: "Identified 5 trend clusters", delay: 6800 }
+  { icon: "✅", text: "Identified 5 pet-related trends", delay: 6800 }
 ];
