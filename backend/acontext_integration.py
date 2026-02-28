@@ -1,128 +1,95 @@
-"""
-Acontext Integration
-
-Handles persistent memory and session management across the startup workflow
-"""
-
 import os
 from typing import Dict, Any, Optional
-import httpx
+from acontext import AcontextClient as AcontextSDK
 
 class AcontextClient:
-    def __init__(self, api_key: str = None, base_url: str = None):
+    def __init__(self, api_key: str = None):
         self.api_key = api_key or os.getenv('ACONTEXT_API_KEY')
-        self.base_url = base_url or os.getenv('ACONTEXT_BASE_URL', 'https://api.acontext.io')
-        self.project_id = os.getenv('ACONTEXT_PROJECT_ID')
         
-        self.headers = {
-            'Authorization': f'Bearer {self.api_key}',
-            'Content-Type': 'application/json'
-        }
+        if self.api_key:
+            try:
+                self.client = AcontextSDK(api_key=self.api_key)
+                self.client.ping()
+                print("✅ Acontext SDK initialized successfully")
+            except Exception as e:
+                print(f"⚠️  Acontext SDK initialization failed: {e}")
+                print("    Falling back to local-only mode")
+                self.client = None
+        else:
+            print("⚠️  Acontext API key not configured, using local-only mode")
+            self.client = None
     
     async def create_session(self, user_id: str, meta: Dict[str, Any] = None) -> Optional[str]:
-        """Create a new Acontext session"""
-        if not self.api_key:
-            return None
+        if not self.client:
+            import uuid
+            return f"local-{uuid.uuid4()}"
         
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    f'{self.base_url}/v1/projects/{self.project_id}/sessions',
-                    headers=self.headers,
-                    json={'user': user_id, 'configs': meta or {}}
-                )
-                response.raise_for_status()
-                data = response.json()
-                return data.get('id')
-            except Exception as e:
-                print(f"Failed to create Acontext session: {e}")
-                return None
+        try:
+            session = self.client.sessions.create(user=user_id, configs=meta or {})
+            print(f"✅ Created Acontext session: {session.id}")
+            return session.id
+        except Exception as e:
+            print(f"⚠️  Failed to create Acontext session: {e}")
+            import uuid
+            return f"local-{uuid.uuid4()}"
     
     async def store_message(self, session_id: str, role: str, content: str, meta: Dict[str, Any] = None):
-        """Store a message in the session"""
-        if not self.api_key or not session_id:
+        if not self.client or not session_id or session_id.startswith("local-"):
             return
         
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    f'{self.base_url}/v1/sessions/{session_id}/messages',
-                    headers=self.headers,
-                    json={
-                        'blob': {'role': role, 'content': content},
-                        'format': 'openai',
-                        'meta': meta or {}
-                    }
-                )
-                response.raise_for_status()
-            except Exception as e:
-                print(f"Failed to store message: {e}")
+        try:
+            self.client.sessions.store_message(
+                session_id=session_id,
+                blob={'role': role, 'content': content},
+                meta=meta or {}
+            )
+        except Exception as e:
+            print(f"⚠️  Failed to store message: {e}")
     
     async def get_messages(self, session_id: str, limit: int = 50) -> list:
-        """Retrieve messages from session"""
-        if not self.api_key or not session_id:
+        if not self.client or not session_id or session_id.startswith("local-"):
             return []
         
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.get(
-                    f'{self.base_url}/v1/sessions/{session_id}/messages',
-                    headers=self.headers,
-                    params={'limit': limit, 'format': 'openai'}
-                )
-                response.raise_for_status()
-                data = response.json()
-                return data.get('messages', [])
-            except Exception as e:
-                print(f"Failed to get messages: {e}")
-                return []
+        try:
+            result = self.client.sessions.get_messages(session_id=session_id, limit=limit)
+            return result.items if hasattr(result, 'items') else []
+        except Exception as e:
+            print(f"⚠️  Failed to get messages: {e}")
+            return []
     
     async def save_artifact(self, disk_id: str, path: str, content: str):
-        """Save an artifact (file) to disk"""
-        if not self.api_key or not disk_id:
+        if not self.client or not disk_id:
             return
         
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    f'{self.base_url}/v1/disks/{disk_id}/artifacts',
-                    headers=self.headers,
-                    json={'path': path, 'content': content}
-                )
-                response.raise_for_status()
-            except Exception as e:
-                print(f"Failed to save artifact: {e}")
+        try:
+            self.client.disks.upsert_artifact(
+                disk_id=disk_id,
+                path=path,
+                content=content
+            )
+        except Exception as e:
+            print(f"⚠️  Failed to save artifact: {e}")
     
     async def get_artifact(self, disk_id: str, path: str) -> Optional[str]:
-        """Retrieve an artifact from disk"""
-        if not self.api_key or not disk_id:
+        if not self.client or not disk_id:
             return None
         
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.get(
-                    f'{self.base_url}/v1/disks/{disk_id}/artifacts',
-                    headers=self.headers,
-                    params={'path': path, 'include_content': True}
-                )
-                response.raise_for_status()
-                data = response.json()
-                return data.get('content')
-            except Exception as e:
-                print(f"Failed to get artifact: {e}")
-                return None
+        try:
+            artifact = self.client.disks.get_artifact(
+                disk_id=disk_id,
+                path=path,
+                include_content=True
+            )
+            return artifact.content if hasattr(artifact, 'content') else None
+        except Exception as e:
+            print(f"⚠️  Failed to get artifact: {e}")
+            return None
     
     async def flush_session(self, session_id: str):
-        """Flush session buffer to extract tasks"""
-        if not self.api_key or not session_id:
+        if not self.client or not session_id or session_id.startswith("local-"):
             return
         
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    f'{self.base_url}/v1/sessions/{session_id}/flush',
-                    headers=self.headers
-                )
-                response.raise_for_status()
-            except Exception as e:
-                print(f"Failed to flush session: {e}")
+        try:
+            self.client.sessions.flush(session_id=session_id)
+        except Exception as e:
+            print(f"⚠️  Failed to flush session: {e}")

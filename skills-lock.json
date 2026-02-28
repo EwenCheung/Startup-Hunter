@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "actionbook": {
+      "source": "actionbook/actionbook",
+      "sourceType": "github",
+      "computedHash": "380d7b2cfbbd8780d08e9014b2c1441a74ea3d1ec2d5967ce213b799a6dbf38f"
+    },
+    "active-research": {
+      "source": "actionbook/actionbook",
+      "sourceType": "github",
+      "computedHash": "c535238e4b8f7213c9997f95124e36c20a290a0ea1fc9a5422e615ea78a97395"
+    }
+  }
+}

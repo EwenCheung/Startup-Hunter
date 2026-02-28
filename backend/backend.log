@@ -1,10 +1,15 @@
-INFO:     Started server process [33838]
+INFO:     Started server process [7270]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:53406 - "GET / HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53413 - "POST /api/chat HTTP/1.1" 200 OK
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [33838]
+python(14398) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+python(14409) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+✅ Acontext SDK initialized successfully
+✅ Acontext SDK initialized successfully
+✅ Created Acontext session: 6ab3d17e-2000-46ab-92e1-5fba1ad3f8d5
+INFO:     127.0.0.1:56033 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56033 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56033 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56033 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56033 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57270 - "GET /health HTTP/1.1" 404 Not Found
