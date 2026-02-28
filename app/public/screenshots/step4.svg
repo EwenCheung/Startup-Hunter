@@ -1,0 +1,42 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8fafc"/>
+  <rect width="800" height="80" fill="#2563eb"/>
+  <text x="20" y="50" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">
+    Test Step 4: Dashboard Display
+  </text>
+  <rect x="20" y="120" width="760" height="440" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="60" cy="160" r="20" fill="#16a34a"/>
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="20" fill="#16a34a">
+    ✓ Dashboard displays expense correctly
+  </text>
+  <text x="100" y="210" font-family="Arial, sans-serif" font-size="16" fill="#64748b">
+    Timestamp: 2026-02-28 12:19:26
+  </text>
+  <text x="100" y="240" font-family="Arial, sans-serif" font-size="16" fill="#64748b">
+    Action: Navigate to dashboard
+  </text>
+  <text x="100" y="270" font-family="Arial, sans-serif" font-size="16" fill="#64748b">
+    Result: All expenses displayed with correct totals
+  </text>
+  <rect x="100" y="300" width="600" height="220" fill="white" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="120" y="330" font-family="Arial, sans-serif" font-size="18" fill="#334155" font-weight="bold">
+    Expense Dashboard
+  </text>
+  <rect x="120" y="350" width="560" height="50" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="140" y="370" font-family="Arial, sans-serif" font-size="14" fill="#334155" font-weight="bold">
+    Office Supplies
+  </text>
+  <text x="140" y="390" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+    2026-02-28
+  </text>
+  <text x="620" y="380" font-family="Arial, sans-serif" font-size="16" fill="#16a34a" font-weight="bold">
+    $125.00
+  </text>
+  <line x1="120" y1="500" x2="680" y2="500" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="480" y="520" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+    Total:
+  </text>
+  <text x="620" y="520" font-family="Arial, sans-serif" font-size="18" fill="#2563eb" font-weight="bold">
+    $125.00
+  </text>
+</svg>

@@ -1,0 +1,114 @@
+# Acontext Docs
+
+## Docs
+
+- [Create agent skill](https://docs.acontext.io/api-reference/agent_skills/create-agent-skill.md): Upload a zip file containing agent skill. The zip file must contain a SKILL.md file (case-insensitive) with YAML format containing 'name' and 'description' fields. The name and description will be extracted from SKILL.md. Files are stored as Disk Artifacts. Optionally associate with a user identifier.
+- [Delete agent skill](https://docs.acontext.io/api-reference/agent_skills/delete-agent-skill.md): Delete agent skill and all associated files
+- [Download skill to sandbox](https://docs.acontext.io/api-reference/agent_skills/download-skill-to-sandbox.md): Download all files from an agent skill to a sandbox environment. Files are placed at /skills/{skill_name}/.
+- [Get agent skill by ID](https://docs.acontext.io/api-reference/agent_skills/get-agent-skill-by-id.md): Get agent skill by its UUID
+- [Get file from agent skill](https://docs.acontext.io/api-reference/agent_skills/get-file-from-agent-skill.md): Get file content or download URL from agent skill. If the file is text-based (parseable), returns parsed content. Otherwise, returns a presigned download URL.
+- [List agent skills](https://docs.acontext.io/api-reference/agent_skills/list-agent-skills.md): List all agent skills under a project
+- [Delete artifact](https://docs.acontext.io/api-reference/artifact/delete-artifact.md): Delete an artifact by path and filename
+- [Download artifact to sandbox](https://docs.acontext.io/api-reference/artifact/download-artifact-to-sandbox.md): Download an artifact from disk storage to a sandbox environment
+- [Get artifact](https://docs.acontext.io/api-reference/artifact/get-artifact.md): Get artifact information by path and filename. Optionally include a presigned URL for downloading and parsed file content.
+- [List artifacts](https://docs.acontext.io/api-reference/artifact/list-artifacts.md): List artifacts in a specific path or all artifacts in a disk
+- [Search artifact content with regex](https://docs.acontext.io/api-reference/artifact/search-artifact-content-with-regex.md): Search through text-based artifact content using regex patterns
+- [Search artifact paths with glob patterns](https://docs.acontext.io/api-reference/artifact/search-artifact-paths-with-glob-patterns.md): Search through artifact file paths using glob patterns (*, ?, etc.)
+- [Update artifact meta](https://docs.acontext.io/api-reference/artifact/update-artifact-meta.md): Update an artifact's metadata (user-defined metadata only)
+- [Upload file from sandbox to disk](https://docs.acontext.io/api-reference/artifact/upload-file-from-sandbox-to-disk.md): Upload a file from a sandbox environment to disk storage as an artifact
+- [Upsert artifact](https://docs.acontext.io/api-reference/artifact/upsert-artifact.md): Upload a file and create or update an artifact record under a disk. File size must not exceed the configured maximum upload size limit (default: 16MB).
+- [Create disk](https://docs.acontext.io/api-reference/disk/create-disk.md): Create a disk group under a project. Optionally associate with a user identifier.
+- [Delete disk](https://docs.acontext.io/api-reference/disk/delete-disk.md): Delete a disk by its UUID
+- [List disks](https://docs.acontext.io/api-reference/disk/list-disks.md): List all disks under a project
+- [Introduction](https://docs.acontext.io/api-reference/introduction.md): Build AI agents with skill memory platform
+- [Create learning space](https://docs.acontext.io/api-reference/learningspaces/create-learning-space.md): Create a new learning space. Optionally associate with a user.
+- [Delete learning space](https://docs.acontext.io/api-reference/learningspaces/delete-learning-space.md): Delete a learning space. Junction records are cascade-deleted by the DB.
+- [Exclude skill from space](https://docs.acontext.io/api-reference/learningspaces/exclude-skill-from-space.md): Remove a skill from a learning space. Idempotent — silently succeeds if not associated.
+- [Get learning space](https://docs.acontext.io/api-reference/learningspaces/get-learning-space.md): Get a learning space by ID.
+- [Include skill in space](https://docs.acontext.io/api-reference/learningspaces/include-skill-in-space.md): Add a skill to a learning space.
+- [Learn from session](https://docs.acontext.io/api-reference/learningspaces/learn-from-session.md): Create an async learning record from a session. Initially stays in pending status.
+- [List learning spaces](https://docs.acontext.io/api-reference/learningspaces/list-learning-spaces.md): List learning spaces with optional user, meta filter, and cursor pagination.
+- [List sessions in space](https://docs.acontext.io/api-reference/learningspaces/list-sessions-in-space.md): List all learning session records for a space, including their processing status.
+- [List skills in space](https://docs.acontext.io/api-reference/learningspaces/list-skills-in-space.md): List all skills associated with a learning space. Returns full skill data.
+- [Update learning space (patch meta)](https://docs.acontext.io/api-reference/learningspaces/update-learning-space-patch-meta.md): Merge provided meta into existing meta. Existing keys not in the request are preserved.
+- [Create a new sandbox](https://docs.acontext.io/api-reference/sandbox/create-a-new-sandbox.md): Create and start a new sandbox for the project
+- [Execute command in sandbox](https://docs.acontext.io/api-reference/sandbox/execute-command-in-sandbox.md): Execute a shell command in the specified sandbox
+- [Get sandbox logs](https://docs.acontext.io/api-reference/sandbox/get-sandbox-logs.md): Get sandbox logs for the project with cursor-based pagination
+- [Kill a sandbox](https://docs.acontext.io/api-reference/sandbox/kill-a-sandbox.md): Kill a running sandbox
+- [Copy session](https://docs.acontext.io/api-reference/session/copy-session.md): Create a complete copy of a session with all its messages and tasks. The copied session will be independent and can be modified without affecting the original.
+- [Create session](https://docs.acontext.io/api-reference/session/create-session.md): Create a new session. Optionally associate with a user identifier. You can also specify a custom UUID using use_uuid.
+- [Delete session](https://docs.acontext.io/api-reference/session/delete-session.md): Delete a session by id
+- [Flush session](https://docs.acontext.io/api-reference/session/flush-session.md): Flush the session buffer for a given session
+- [Get message observing status for a session](https://docs.acontext.io/api-reference/session/get-message-observing-status-for-a-session.md): Returns the count of observed, in_process, and pending messages
+- [Get messages from session](https://docs.acontext.io/api-reference/session/get-messages-from-session.md): Get messages from session. Default format is openai. Can convert to acontext (original), anthropic, or gemini format.
+- [Get session configs](https://docs.acontext.io/api-reference/session/get-session-configs.md): Get session configs by id
+- [Get sessions](https://docs.acontext.io/api-reference/session/get-sessions.md): Get all sessions under a project, optionally filtered by user or configs
+- [Get token counts for session](https://docs.acontext.io/api-reference/session/get-token-counts-for-session.md): Get total token counts for all text and tool-call parts in a session
+- [Patch message metadata](https://docs.acontext.io/api-reference/session/patch-message-metadata.md): Update message metadata using patch semantics. Only updates keys present in the request. Pass null as value to delete a key.
+- [Patch session configs](https://docs.acontext.io/api-reference/session/patch-session-configs.md): Update session configs using patch semantics. Only updates keys present in the request. Pass null as value to delete a key. Returns the complete configs after patch.
+- [Store message to session](https://docs.acontext.io/api-reference/session/store-message-to-session.md): Supports JSON and multipart/form-data. In multipart mode: the payload is a JSON string placed in a form field. The format parameter indicates the format of the input message (default: openai, same as GET). The blob field should be a complete message object: for openai, use OpenAI ChatCompletionMessageParam format (with role and content); for anthropic, use Anthropic MessageParam format (with role and content); for acontext (internal), use {role, parts} format. The optional meta field allows attaching user-provided metadata to the message, which can be retrieved via get_messages().metas or updated via patch_message_meta().
+- [Update session configs](https://docs.acontext.io/api-reference/session/update-session-configs.md): Update session configs by id
+- [Get tasks from session](https://docs.acontext.io/api-reference/task/get-tasks-from-session.md): Get tasks from session with cursor-based pagination
+- [Delete user](https://docs.acontext.io/api-reference/user/delete-user.md): Delete a user by identifier and cascade delete all associated resources (Session, Disk, Skill)
+- [Get user resources](https://docs.acontext.io/api-reference/user/get-user-resources.md): Get the resource counts (Sessions, Disks, Skills) associated with a user
+- [List users](https://docs.acontext.io/api-reference/user/list-users.md): Get all users under a project. If limit is not provided or 0, all users will be returned.
+- [Async Python Client](https://docs.acontext.io/chore/async_python.md): Use the async Python client for non-blocking Acontext operations
+- [Use Acontext Badge](https://docs.acontext.io/chore/badge.md): Tag your projects with Acontext badge, let the community know
+- [Using Agent Skills](https://docs.acontext.io/engineering/agent_skills.md): Upload skills and build agents that use them
+- [Prompt Cache Stability](https://docs.acontext.io/engineering/cache.md): Maintain LLM cache hits when using edit strategies
+- [Copy Session](https://docs.acontext.io/engineering/copy_session.md): Duplicate sessions to experiment safely or create conversation branches
+- [Context Editing](https://docs.acontext.io/engineering/editing.md): Edit context on-the-fly without modifying stored messages
+- [Session Summary](https://docs.acontext.io/engineering/session_summary.md): Compact task summary for prompts
+- [What is Context Engineering?](https://docs.acontext.io/engineering/whatis.md): Design and optimize the information provided to LLMs and AI agents
+- [What is Acontext?](https://docs.acontext.io/index.md): Skill memory platform for building cloud-native AI Agents
+- [Agno](https://docs.acontext.io/integrations/agno.md): Integrate Agno with Acontext for session persistence and task extraction
+- [Vercel AI SDK](https://docs.acontext.io/integrations/ai-sdk.md): Integrate Vercel AI SDK with Acontext for session persistence and task extraction
+- [Claude Agent SDK](https://docs.acontext.io/integrations/claude-agent.md): Integrate Claude Agent SDK with Acontext for session persistence
+- [Introduction](https://docs.acontext.io/integrations/intro.md): Add session persistence and task extraction to any AI framework
+- [OpenAI Python SDK](https://docs.acontext.io/integrations/openai-python.md): Integrate OpenAI Python SDK with Acontext for session persistence and task extraction
+- [OpenAI TypeScript SDK](https://docs.acontext.io/integrations/openai-typescript.md): Integrate OpenAI TypeScript SDK with Acontext for session persistence and task extraction
+- [OpenAI Agents SDK](https://docs.acontext.io/integrations/openai_agent.md): Integrate OpenAI Agents SDK with Acontext for session persistence and task extraction
+- [Custom Memory Algorithms](https://docs.acontext.io/learn/custom-memory.md): Define how your agent remembers by writing SKILL.md files
+- [Managing Learning Spaces](https://docs.acontext.io/learn/learning-spaces.md): Default skills, custom skills, and managing learning spaces
+- [Quickstart](https://docs.acontext.io/learn/quick.md): Set up skill memory for your agent in 3 steps
+- [What is Skill Memory?](https://docs.acontext.io/learn/skill-memory.md): Agent memory stored as structured skill files — filesystem-compatible, configurable, and human-readable
+- [Quickstart for AI](https://docs.acontext.io/llm_quick.md): Let your coding agent build with Acontext using llms.txt
+- [Agent Tasks](https://docs.acontext.io/observe/agent_tasks.md): Automatic task extraction from agent conversations
+- [Session Buffer](https://docs.acontext.io/observe/buffer.md): Batch processing for cost-efficient task extraction
+- [Dashboard](https://docs.acontext.io/observe/dashboard.md): View Context, Artifacts, Tasks and Skills
+- [Disable Task Tracking](https://docs.acontext.io/observe/disable_tasks.md): Skip automatic task extraction for specific sessions
+- [Distributed Tracing](https://docs.acontext.io/observe/traces.md): Monitor request flows with OpenTelemetry
+- [What is Agent Observability?](https://docs.acontext.io/observe/whatis.md): Understand what your agent does, how it performs, and where it fails
+- [Quickstart](https://docs.acontext.io/quick.md): Install Acontext SDK and run a demo script
+- [Core Dependencies](https://docs.acontext.io/settings/core.md): Configure LLM providers, embedding models, and core services
+- [Run Acontext Locally](https://docs.acontext.io/settings/local.md): Use `acontext-cli` to run Acontext locally.
+- [Runtime](https://docs.acontext.io/settings/runtime.md): Runtime settings are used to configure the runtime behavior of the Acontext Agent.
+- [Disk](https://docs.acontext.io/store/disk.md): S3-backed file storage for your agent
+- [Session Configs](https://docs.acontext.io/store/messages/filter-by-configs.md): Manage session-level configuration with full replacement, patch, and filter semantics
+- [Multi-modal Messages](https://docs.acontext.io/store/messages/multi-modal.md): Store messages with images, audio, and documents
+- [Multi-provider Messages](https://docs.acontext.io/store/messages/multi-provider.md): Store and retrieve messages from OpenAI, Anthropic, and Gemini formats
+- [Anthropic Special Flags](https://docs.acontext.io/store/messages/special/anthropic.md): Store Anthropic-specific message flags like prompt caching and thinking blocks
+- [Format Conversion](https://docs.acontext.io/store/messages/special/format-conversion.md): How Acontext normalizes and converts messages across OpenAI, Anthropic, and Gemini formats
+- [Gemini Special Handling](https://docs.acontext.io/store/messages/special/gemini.md): Gemini-specific message handling like thinking blocks and function call ID generation
+- [Message Metadata](https://docs.acontext.io/store/messages/special/message-meta.md): Attach custom metadata to messages for tracking, filtering, and analytics
+- [What is Context Storage?](https://docs.acontext.io/store/overview.md): Unified storage for messages, files, skills, and sandboxes
+- [Store with User](https://docs.acontext.io/store/per-user.md): Associate Sessions, Disks, and Skills with user identifiers
+- [Sandbox](https://docs.acontext.io/store/sandbox.md): Execute code in isolated environments
+- [Agent Skill](https://docs.acontext.io/store/skill.md): Store reusable agent skills
+- [Sandbox Tools](https://docs.acontext.io/tool/bash_tools.md): Execute code and manage files in secure sandbox environments
+- [Disk Tools](https://docs.acontext.io/tool/disk_tools.md): Enable LLMs to manage files on Acontext disks
+- [Skill Content Tools](https://docs.acontext.io/tool/skill_tools.md): Enable LLMs to read skill files without sandbox
+- [What is Agent Tool?](https://docs.acontext.io/tool/whatis.md)
+
+## OpenAPI Specs
+
+- [openapi](https://docs.acontext.io/api-reference/openapi.json)
+
+## Optional
+
+- [Home](https://acontext.io)
+- [Readme](https://github.com/memodb-io/Acontext)
+- [Discord](https://discord.acontext.io)
+- [Blog](https://acontext.io/blog)
+- [Integrations](https://docs.acontext.io/integrations)
+- [API](https://docs.acontext.io/api-reference)
