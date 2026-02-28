@@ -4,6 +4,12 @@
 
 **Startup Hunter** is an enterprise-grade AI orchestration platform that transforms market research into production-ready applications. Leveraging advanced web scraping, persistent memory architecture, and autonomous browser testing, the system delivers end-to-end startup validation in minutes.
 
+### 🎬 Demo Video
+
+[![Startup Hunter Demo](https://img.youtube.com/vi/PEazTKfANWc/maxresdefault.jpg)](https://youtu.be/PEazTKfANWc)
+
+**Watch here:** https://youtu.be/PEazTKfANWc
+
 ---
 
 ## System Overview
